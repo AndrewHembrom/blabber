@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.IO Test</title>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+  <script>
+    const socket = io("http://localhost:3000");
+
+    socket.on("connect", () => {
+      console.log("Connected to backend:", socket.id);
+    });
+
+    socket.on("disconnect", () => {
+      console.log("Disconnected");
+    });
+  </script>
+</body>
+</html>
+
